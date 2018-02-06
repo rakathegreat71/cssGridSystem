@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>index2</title>
+<style media="screen">
+  .wrapper > div:nth-child(odd){
+    background-color: #eee;
+    padding: 1em;
+  }
+  .wrapper > div{
+    background-color: #ddd;
+    padding: 1em;
+  }
+  .wrapper{
+    display: grid;
+    /* grid-template-columns: 1fr 2fr 1fr; */
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: minmax(100px, auto);
+  }
+  .nested{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1em;
+  }
+  .nested > div{
+    border: 1px red solid;
+    padding: 1em;
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div>Lorem ipsum dolor sit. </div>
+  <div>Lorem ipsum dolor sit Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+  <div>Lorem ipsum dolor sit. </div>
+  <div>Lorem ipsum dolor sit. </div>
+  <div class="nested">
+    <div>
+      Lorem ipsum dolor sit amet,
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet,
+
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet,
+
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet,
+
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet,
+
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet,
+
+    </div>
+
+  </div>
+  <div>Lorem ipsum dolor sit. </div>
+  <div>Lorem ipsum dolor sit. </div>
+</div>
+</body>
+</html>
